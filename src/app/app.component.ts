@@ -10,4 +10,21 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-angular-app';
+  isModalOpen: boolean = false;
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal(event?: MouseEvent) {
+    if (event) {
+      const target = event.target as HTMLElement;
+      if (target.classList.contains('modal')) {
+        this.isModalOpen = false;
+      }
+    } else {
+      this.isModalOpen = false;
+    }
+  }
 }
+
