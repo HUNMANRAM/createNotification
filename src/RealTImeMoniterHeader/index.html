@@ -1,17 +1,27 @@
 <div class="container">
-    <!-- Left Side: Tabs -->
-    <mat-tab-group class="tabs">
-      <mat-tab label="Tab 1">Content for Tab 1</mat-tab>
-      <mat-tab label="Tab 2">Content for Tab 2</mat-tab>
-      <mat-tab label="Tab 3">Content for Tab 3</mat-tab>
-      <mat-tab label="Tab 4">Content for Tab 4</mat-tab>
-    </mat-tab-group>
+    <!-- Back Button -->
+    <div class="back-button">
+      <button mat-icon-button (click)="goBack()">
+        <img src="assets/back-button-icon.png" alt="Back" />
+      </button>
+    </div>
   
-    <!-- Right Side: Checkbox, Button, and Info Icon -->
-    <div class="right-panel">
-      <mat-checkbox>Checkbox</mat-checkbox>
-      <button mat-raised-button color="primary">Button</button>
-      <mat-icon matTooltip="Information about this section">info</mat-icon>
+    <!-- Content Section -->
+    <div class="content-section">
+      <!-- Left Side: Tabs -->
+      <mat-tab-group class="tabs">
+        <mat-tab label="Tab 1">Content for Tab 1</mat-tab>
+        <mat-tab label="Tab 2">Content for Tab 2</mat-tab>
+        <mat-tab label="Tab 3">Content for Tab 3</mat-tab>
+        <mat-tab label="Tab 4">Content for Tab 4</mat-tab>
+      </mat-tab-group>
+  
+      <!-- Right Side: Checkbox, Button, and Info Icon -->
+      <div class="right-panel">
+        <mat-checkbox>Checkbox</mat-checkbox>
+        <button mat-raised-button color="primary">Button</button>
+        <mat-icon matTooltip="Information about this section">info</mat-icon>
+      </div>
     </div>
   </div>
   
