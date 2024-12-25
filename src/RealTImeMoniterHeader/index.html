@@ -1,27 +1,29 @@
-<div class="header-row">
-    <!-- Left Section: Back Button and Tabs -->
+<div class="toolbar">
+    <!-- Left Section -->
     <div class="left-section">
-      <!-- Back Button -->
-      <div class="back-button">
-        <button mat-icon-button (click)="goBack()">
-          <img src="assets/back-button-icon.png" alt="Back" />
-        </button>
-      </div>
-  
-      <!-- Tabs -->
-      <mat-tab-group class="tabs">
-        <mat-tab label="Tab 1"></mat-tab>
-        <mat-tab label="Tab 2"></mat-tab>
-        <mat-tab label="Tab 3"></mat-tab>
-        <mat-tab label="Tab 4"></mat-tab>
+      <button class="back-button"></button>
+      <mat-tab-group class="tab-group">
+        <mat-tab label="Real Time Monitoring"></mat-tab>
+        <mat-tab label="Crew Performance"></mat-tab>
+        <mat-tab label="Crew Activity"></mat-tab>
+        <mat-tab label="Equipment Reliability"></mat-tab>
       </mat-tab-group>
     </div>
   
-    <!-- Right Panel -->
-    <div class="right-panel">
-      <mat-checkbox>Checkbox</mat-checkbox>
-      <button mat-raised-button color="primary">Button</button>
-      <mat-icon matTooltip="Information about this section">info</mat-icon>
+    <!-- Right Section -->
+    <div class="right-section">
+      <label class="toggle-switch">
+        Stim Pump
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <label class="toggle-switch">
+        Super POD
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <button class="create-notification">Create Notification</button>
+      <button class="job-info">Job Info</button>
     </div>
   </div>
   

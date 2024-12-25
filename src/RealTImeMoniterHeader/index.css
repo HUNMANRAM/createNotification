@@ -1,59 +1,112 @@
-/* Container for the header row */
-.header-row {
+/* Toolbar Container */
+.toolbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    background-color: #f5f5f5; /* Optional: Background for the row */
-    gap: 10px;
+    justify-content: space-between; /* Large space between left and right sections */
+    background-color: #1e293b; /* Matches the dark theme in the image */
+    padding: 8px 16px; /* Adjusts spacing inside the toolbar */
+    color: #fff;
+    height: 60px; /* Fixed height for the toolbar */
   }
   
-  /* Left Section: Back Button and Tabs */
+  /* Left Section */
   .left-section {
     display: flex;
     align-items: center;
-    gap: 15px; /* Spacing between back button and tabs */
+    gap: 16px; /* Space between back button and tabs */
   }
   
   /* Back Button */
   .back-button {
-    display: flex;
-    align-items: center;
-  }
-  
-  .back-button button {
-    background: none;
+    background: url('/path-to-back-icon.png') no-repeat center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
     border: none;
     cursor: pointer;
   }
   
-  .back-button img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  /* Tabs Section */
-  .tabs {
-    display: flex;
-    flex-grow: 1;
-    max-width: 70%; /* Limit width to avoid overlapping with the right panel */
-  }
-  
-  .mat-tab-group {
-    width: 100%;
-  }
-  
-  .mat-tab-label-container {
-    white-space: nowrap;
-    overflow-x: auto; /* Enable horizontal scrolling if tabs overflow */
-  }
-  
-  /* Right Panel */
-  .right-panel {
+  /* Tab Group Styling */
+  .tab-group {
     display: flex;
     align-items: center;
-    gap: 15px;
-    justify-content: flex-end; /* Align to the far right */
+    gap: 24px; /* Spacing between tab labels */
+  }
+  
+  mat-tab {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  mat-tab:hover {
+    color: #00bcd4; /* Highlight color on hover */
+  }
+  
+  /* Right Section */
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Space between elements on the right */
+  }
+  
+  /* Toggle Switch Styling */
+  .toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+  }
+  
+  .toggle-switch input {
+    display: none;
+  }
+  
+  .toggle-switch .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #4a5568;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .toggle-switch input:checked + .slider {
+    background-color: #00bcd4;
+  }
+  
+  .toggle-switch input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+  
+  /* Buttons on Right */
+  .create-notification,
+  .job-info {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .create-notification:hover,
+  .job-info:hover {
+    background-color: #0288d1;
   }
   
