@@ -1,0 +1,71 @@
+.upload-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #1a1a2e;
+    color: #fff;
+  }
+  
+  .file-upload-box {
+    width: 60%;
+  }
+  
+  .upload-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .custom-file-upload {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-file-upload input[type='file'] {
+    display: none;
+  }
+  
+  .file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-hint {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+  }
+  
+  .maintenance-box {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-group input[type='checkbox'] {
+    margin-right: 5px;
+  }
+  
+  .wo-id {
+    display: flex;
+    align-items: center;
+  }
+  
+  .wo-id label {
+    margin-right: 5px;
+  }
+  
