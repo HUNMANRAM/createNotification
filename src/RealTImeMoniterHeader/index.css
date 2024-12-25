@@ -1,13 +1,15 @@
-/* Main container */
-.container {
+/* Container for the header row */
+.header-row {
     display: flex;
-    flex-direction: column; /* Stack the back button and content section vertically */
-    gap: 20px;
-    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
     box-sizing: border-box;
+    background-color: #f5f5f5; /* Optional background for the row */
+    gap: 15px;
   }
   
-  /* Back button */
+  /* Back Button */
   .back-button {
     display: flex;
     align-items: center;
@@ -20,34 +22,26 @@
   }
   
   .back-button img {
-    width: 24px; /* Adjust the size of the back button icon */
+    width: 24px;
     height: 24px;
   }
   
-  /* Content section (tabs and right panel) */
-  .content-section {
-    display: flex;
-    justify-content: space-between; /* Align tabs on the left and right panel on the right */
-    gap: 20px;
-  }
-  
-  /* Tabs */
+  /* Tabs Section */
   .tabs {
-    flex: 1; /* Allow tabs to take up remaining space */
+    flex-grow: 1;
     max-width: 60%;
   }
   
   .mat-tab-group {
-    display: inline-flex;
-    flex-wrap: nowrap;
+    width: 100%;
   }
   
   .mat-tab-label-container {
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: auto; /* Ensures proper scrolling if the tabs overflow */
   }
   
-  /* Right-side panel */
+  /* Right Panel */
   .right-panel {
     display: flex;
     align-items: center;
@@ -56,14 +50,19 @@
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .content-section {
-      flex-direction: column; /* Stack tabs and right panel vertically */
-      align-items: stretch;
+    .header-row {
+      flex-wrap: wrap; /* Stack elements vertically on smaller screens */
     }
   
-    .tabs,
-    .right-panel {
+    .tabs {
       max-width: 100%;
+      order: 1; /* Ensure tabs appear before right panel if wrapping */
+    }
+  
+    .right-panel {
+      justify-content: flex-start; /* Align right panel elements to the left */
+      width: 100%; /* Ensure full width for better alignment */
+      order: 2;
     }
   }
   
