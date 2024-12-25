@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('background-image.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .form-row {
+      background: rgba(255, 255, 255, 0.8); /* Optional: Adds transparency */
+      padding: 20px;
+      border-radius: 10px;
+      width: 50%;
+      margin: 50px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="notification-id">Notification ID</label>
+      <input type="text" id="notification-id" value="##########" readonly />
+    </div>
+    <div class="form-group">
+      <label for="client-name">Client Name</label>
+      <input type="text" id="client-name" value="SLB" readonly />
+    </div>
+    <div class="form-group">
+      <label for="mtm-id">MTM-ID</label>
+      <input type="text" id="mtm-id" value="MTM-167" readonly />
+    </div>
+    <div class="form-group">
+      <label for="crew-name">Crew Name</label>
+      <input type="text" id="crew-name" value="UDH-KSA-UC-1074" readonly />
+    </div>
+  </div>
+</body>
+</html>
