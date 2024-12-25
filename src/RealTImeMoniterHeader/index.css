@@ -1,0 +1,51 @@
+/* Container for the entire layout */
+.container {
+    display: flex; /* Display left and right sections side by side */
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; /* Add space between the tabs and right panel */
+    gap: 20px; /* Add spacing between the left and right sections */
+    max-width: 100%; /* Ensure it takes up available space */
+    padding: 20px; /* Add padding around the container */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+  }
+  
+  /* Tabs section */
+  .tabs {
+    flex: 1; /* Allow tabs to take up remaining space */
+    max-width: 60%; /* Ensure tabs do not exceed 60% of the container width */
+  }
+  
+  .mat-tab-group {
+    display: inline-flex; /* Keep all tabs in one row */
+    flex-wrap: nowrap; /* Prevent tab wrapping */
+  }
+  
+  .mat-tab-label-container {
+    white-space: nowrap; /* Prevent tab text from breaking to new lines */
+    overflow-x: auto; /* Allow horizontal scrolling if tabs overflow */
+  }
+  
+  /* Right-side panel */
+  .right-panel {
+    display: flex; /* Arrange items in a horizontal row */
+    align-items: center; /* Vertically align items */
+    gap: 15px; /* Space between checkbox, button, and icon */
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: stretch; /* Ensure full width on small screens */
+    }
+  
+    .tabs,
+    .right-panel {
+      max-width: 100%; /* Allow full width for smaller screens */
+    }
+  
+    .right-panel {
+      justify-content: space-between; /* Space out the right panel elements */
+    }
+  }
+  
