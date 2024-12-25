@@ -2,7 +2,7 @@
 .toolbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Large space between left and right sections */
+    justify-content: space-between;
     background-color: #1e293b; /* Matches the dark theme in the image */
     padding: 8px 16px; /* Adjusts spacing inside the toolbar */
     color: #fff;
@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     gap: 16px; /* Space between back button and tabs */
+    flex-grow: 2; /* Extra space allocated to the left section */
   }
   
   /* Back Button */
@@ -50,6 +51,8 @@
     display: flex;
     align-items: center;
     gap: 16px; /* Space between elements on the right */
+    flex-grow: 1; /* Less space allocated to the right section */
+    justify-content: flex-end; /* Aligns controls to the right */
   }
   
   /* Toggle Switch Styling */
