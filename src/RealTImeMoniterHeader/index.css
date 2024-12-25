@@ -5,8 +5,15 @@
     justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
-    background-color: #f5f5f5; /* Optional background for the row */
-    gap: 15px;
+    background-color: #f5f5f5; /* Optional: Background for the row */
+    gap: 10px;
+  }
+  
+  /* Left Section: Back Button and Tabs */
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between back button and tabs */
   }
   
   /* Back Button */
@@ -28,8 +35,9 @@
   
   /* Tabs Section */
   .tabs {
+    display: flex;
     flex-grow: 1;
-    max-width: 60%;
+    max-width: 70%; /* Limit width to avoid overlapping with the right panel */
   }
   
   .mat-tab-group {
@@ -38,7 +46,7 @@
   
   .mat-tab-label-container {
     white-space: nowrap;
-    overflow-x: auto; /* Ensures proper scrolling if the tabs overflow */
+    overflow-x: auto; /* Enable horizontal scrolling if tabs overflow */
   }
   
   /* Right Panel */
@@ -46,23 +54,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .header-row {
-      flex-wrap: wrap; /* Stack elements vertically on smaller screens */
-    }
-  
-    .tabs {
-      max-width: 100%;
-      order: 1; /* Ensure tabs appear before right panel if wrapping */
-    }
-  
-    .right-panel {
-      justify-content: flex-start; /* Align right panel elements to the left */
-      width: 100%; /* Ensure full width for better alignment */
-      order: 2;
-    }
+    justify-content: flex-end; /* Align to the far right */
   }
   
