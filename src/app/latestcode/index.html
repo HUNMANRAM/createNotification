@@ -1,0 +1,94 @@
+<!-- Button to Open Modal -->
+<button type="button" class="open-modal-btn" (click)="openModal()">Create Notification</button>
+
+<!-- Modal Component -->
+<div class="modal-overlay" [class.show]="isModalOpen" (click)="closeModal($event)">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="notification-container">
+      <!-- Modal Header -->
+      <div class="notification-header">
+        <h2>Create Notification</h2>
+        <button type="button" class="close-btn" (click)="closeModal()">×</button>
+      </div>
+
+      <!-- Modal Form -->
+      <form class="notification-form">
+        <!-- Notification Details Section -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="notification-id">Notification ID</label>
+            <input type="text" id="notification-id" value="##########" readonly />
+          </div>
+          <div class="form-group">
+            <label for="client-name">Client Name</label>
+            <input type="text" id="client-name" value="SLB" readonly />
+          </div>
+          <div class="form-group">
+            <label for="mtm-id">MTM-ID</label>
+            <input type="text" id="mtm-id" value="MTM-167" readonly />
+          </div>
+          <div class="form-group">
+            <label for="crew-name">Crew Name</label>
+            <input type="text" id="crew-name" value="UDH-KSA-UC-1074" readonly />
+          </div>
+        </div>
+
+        <!-- Additional Form Fields -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="asset-number">Asset Number</label>
+            <select id="asset-number">
+              <option>Select Asset Number</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="asset-type">Asset Type</label>
+            <select id="asset-type">
+              <option>Select Type</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="component">Component</label>
+            <select id="component">
+              <option>Select Component</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Alarm and Severity -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="alarm-type">Select Alarm Type</label>
+            <select id="alarm-type">
+              <option>PHM</option>
+              <option>Threshold</option>
+              <option>Outlier</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="severity">Select Severity</label>
+            <select id="severity">
+              <option>Warning</option>
+              <option>Severe</option>
+              <option>Critical</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" id="description" placeholder="Enter description here..." />
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="form-actions">
+          <button type="button" class="secondary-btn" (click)="closeModal()">Cancel</button>
+          <button type="submit" class="primary-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
