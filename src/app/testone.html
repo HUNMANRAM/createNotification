@@ -1,0 +1,52 @@
+<form [formGroup]="dropdownForm">
+    <!-- Select for Main Description -->
+    <div>
+      <label for="descriptionSelect">Select Description:</label>
+      <select
+        id="descriptionSelect"
+        formControlName="description"
+        (change)="onDescriptionChange()"
+      >
+        <option *ngFor="let item of data" [value]="item.description">
+          {{ item.description }}
+        </option>
+      </select>
+    </div>
+  
+    <!-- Select for Components -->
+    <div>
+      <label for="componentSelect">Select Component:</label>
+      <select
+        id="componentSelect"
+        formControlName="component"
+        [disabled]="!components.length"
+        (change)="onComponentChange()"
+      >
+        <option *ngFor="let component of components" [value]="component.name">
+          {{ component.name }}
+        </option>
+      </select>
+    </div>
+  
+    <!-- Select for Deficiencies -->
+    <div>
+      <label for="deficiencySelect">Select Deficiency:</label>
+      <select
+        id="deficiencySelect"
+        formControlName="deficiency"
+        [disabled]="!deficiencies.length"
+      >
+        <option *ngFor="let deficiency of deficiencies" [value]="deficiency">
+          {{ deficiency }}
+        </option>
+      </select>
+    </div>
+  </form>
+  
+  <div>
+    <h3>Selected Values:</h3>
+    <p><strong>Description:</strong> {{ dropdownForm.value.description }}</p>
+    <p><strong>Component:</strong> {{ dropdownForm.value.component }}</p>
+    <p><strong>Deficiency:</strong> {{ dropdownForm.value.deficiency }}</p>
+  </div>
+  
