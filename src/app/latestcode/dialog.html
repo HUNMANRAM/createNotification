@@ -1,0 +1,52 @@
+<h2 mat-dialog-title>Cascading Dropdown Form</h2>
+<div mat-dialog-content>
+  <form [formGroup]="dropdownForm">
+    <!-- Description Dropdown -->
+    <div class="form-group">
+      <label for="description">Description</label>
+      <aegis-select
+        id="description"
+        formControlName="description"
+        [options]="descriptions"
+        (selectionChange)="onDescriptionChange($event)"
+      ></aegis-select>
+    </div>
+
+    <!-- Component Dropdown -->
+    <div class="form-group" *ngIf="components.length > 0">
+      <label for="component">Component</label>
+      <aegis-select
+        id="component"
+        formControlName="component"
+        [options]="components"
+        [labelKey]="'name'"
+        (selectionChange)="onComponentChange($event)"
+      ></aegis-select>
+    </div>
+
+    <!-- Deficiency Dropdown -->
+    <div class="form-group" *ngIf="deficiencies.length > 0">
+      <label for="deficiency">Deficiency</label>
+      <aegis-select
+        id="deficiency"
+        formControlName="deficiency"
+        [options]="deficiencies"
+        (selectionChange)="onDeficiencyChange($event)"
+      ></aegis-select>
+    </div>
+
+    <!-- Root Cause Dropdown -->
+    <div class="form-group" *ngIf="rootCauses.length > 0">
+      <label for="rootCause">Root Cause</label>
+      <aegis-select
+        id="rootCause"
+        formControlName="rootCause"
+        [options]="rootCauses"
+      ></aegis-select>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button color="primary" (click)="submitForm()">Submit</button>
+</div>
